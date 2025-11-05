@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: api_clima
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: usuario
+      DB_PASSWORD: senha
+      DB_NAME: projeto
+      WEATHER_API_KEY: 08525af67f547a37343c10cb46eba282  # Substitua pela sua API Key do OpenWeatherMap
+    networks:
+      - rede_clima
+
+  db:
+    image: mysql:8
+    container_name: mysql_clima
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: projeto
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: senha
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - rede_clima
+
+volumes:
+  mysql_data:
+
+networks:
+  rede_clima:

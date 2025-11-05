@@ -1,0 +1,36 @@
+name: CI - Python checks
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Quick import & compile check
+        run: |
+          # garante que os módulos importam sem erro
+          python -c "import src.app"
+          python -m compileall -q .
+
+      - name: Run basic lint (optional)
+        run: |
+          # Instalar flake8 se desejar (comentado por padrão)
+          # pip install flake8
+          # flake8 . || true
+          echo "Lint step skipped by default"

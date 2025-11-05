@@ -1,0 +1,19 @@
+labels:
+  - name: bug
+    color: FF0000
+    description: Problemas que quebram o comportamento
+  - name: enhancement
+    color: 1E90FF
+    description: Melhorias e novos recursos
+  - name: docs
+    color: 2ECC71
+    description: Documentação
+  - name: test
+    color: 8E44AD
+    description: Testes/QA
+  - name: ci
+    color: F39C12
+    description: Integração contínua / workflows
+  - name: infra
+    color: 95A5A6
+    description: Docker / infraestrutura
