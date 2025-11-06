@@ -114,3 +114,30 @@ Este arquivo lista os cards que representam o trabalho já realizado e o trabalh
 ## Exportar para CSV/JSON
 
 Se preferir, posso exportar estes cards para `docs/project-cards.csv` ou `docs/project-cards.json` para facilitar importação/automação — quer que eu gere agora?
+
+---
+
+## ADICIONAIS (inserir novos cards manualmente abaixo)
+
+Se você tem novos itens para adicionar ao Kanban, copie o template abaixo e preencha os campos; depois cole como novo card no Project ou adicione como nova issue e associe ao Project.
+
+Template de card (preencha e cole no Kanban):
+
+```
+Título: <Título curto e padronizado, ex.: feature: adicionar X>
+Descrição: <Descrição completa do que precisa ser feito>
+Labels: <comma-separated, ex.: enhancement,infra>
+Milestone: <opcional, ex.: v1.0.0>
+Issue: <opcional, link para a issue relacionada>
+Status: <Backlog | To Do | In Progress | In Review | Done>
+```
+
+Exemplo (cole abaixo do último item):
+
+Título: feature: implementação do endpoint /clima/batch
+Descrição: Criar endpoint que recebe lista de cidades e retorna resumo com caching e paralelismo controlado.
+Labels: enhancement, infra
+Milestone: v1.0.0
+Issue: <coloque link se já criou a issue>
+Status: Backlog
+

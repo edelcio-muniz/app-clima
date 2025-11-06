@@ -1,0 +1,85 @@
+cards:
+  - title: "Scaffold inicial do projeto (arquivos base)"
+    description: "Criação de estrutura básica, README.md, Dockerfile, docker-compose.yml, requirements.txt, e scripts de demonstração/teste."
+    labels: [docs, infra]
+    milestone: v1.0.0
+    issue: null
+    status: Done
+  - title: "Implementar API Flask básica"
+    description: "Endpoint /clima/<cidade>, /historico, /health e persistência em MySQL (tabela consultas_clima)."
+    labels: [enhancement, infra]
+    milestone: v1.0.0
+    issue: null
+    status: Done
+  - title: "Docker + Docker Compose (web + MySQL)"
+    description: "Dockerfile atualizado e docker-compose.yml para web e db; make targets."
+    labels: [infra]
+    milestone: null
+    issue: null
+    status: Done
+  - title: "Testes de integração básicos"
+    description: "tests/test_api.py com 7 testes de endpoints; execução via make test e scripts de demonstração."
+    labels: [test]
+    milestone: null
+    issue: null
+    status: Done
+  - title: "Ajuste de dependências - cryptography"
+    description: "Adição de cryptography ao requirements.txt para compatibilidade com MySQL 8."
+    labels: [infra]
+    milestone: null
+    issue: null
+    status: Done
+  - title: "Scripts auxiliares e automações iniciais"
+    description: "scripts/create-github-resources.sh, scripts/monitor-api-key.sh, scripts/test-basic.sh e Makefile."
+    labels: [infra, ci]
+    milestone: null
+    issue: null
+    status: Done
+  - title: "Criar Project / Kanban"
+    description: "Project criado pelo usuário; aguardando criação automática de colunas e movimentação de issues. Project URL: https://github.com/users/edelcio-muniz/projects/7"
+    labels: [infra, docs]
+    milestone: null
+    issue: "https://github.com/users/edelcio-muniz/projects/7"
+    status: In Progress
+  - title: "Criar automações do Project"
+    description: "Automations sugeridas (mover issues novas para Backlog, mover PRs com merge para Done, etc.)."
+    labels: [infra]
+    milestone: null
+    issue: null
+    status: In Progress
+  - title: "Adicionar CI básico"
+    description: "Criar workflow GitHub Actions que instale dependências e execute checagens básicas e testes."
+    labels: [ci, enhancement]
+    milestone: v1.0.0
+    issue: "https://github.com/edelcio-muniz/app-clima/issues/1"
+    status: Backlog
+  - title: "Configurar Kanban / Project"
+    description: "Criar Project com colunas e adicionar issues iniciais."
+    labels: [infra, docs]
+    milestone: null
+    issue: "https://github.com/edelcio-muniz/app-clima/issues/2"
+    status: Backlog
+  - title: "Melhorar tratamento de erros da API"
+    description: "Revisar e melhorar mensagens de erro, códigos HTTP e logs."
+    labels: [bug, enhancement]
+    milestone: null
+    issue: "https://github.com/edelcio-muniz/app-clima/issues/3"
+    status: Backlog
+  - title: "Migrar app-clima para minikube / Kubernetes"
+    description: "Gerar manifests k8s, preparar k8s/ e Makefile targets."
+    labels: [infra]
+    milestone: null
+    issue: null
+    status: Backlog
+  - title: "Melhorar cobertura de testes e lint"
+    description: "Adicionar pytest, testes unitários, linting e integrar ao CI."
+    labels: [test, ci]
+    milestone: null
+    issue: null
+    status: Backlog
+  - title: "Documentação de uso e deploy"
+    description: "Completar USAGE.md, COMMANDS.md e exemplos de deploy com variáveis e secrets."
+    labels: [docs]
+    milestone: null
+    issue: null
+    status: Backlog
